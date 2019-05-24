@@ -1,0 +1,55 @@
+
+@side-width:240px;
+@side-footer-height:60px;
+@side-brand-height:60px;
+
+
+
+
+@space-width:15px;
+
+@mobile-width:768px;
+@header-height:50px;
+
+@text-color-title:#212121;
+@text-color-label:#757575;
+@text-color-label2:#ccc;
+
+
+
+@hover-bg-color:#f3f3f3;
+@primary-color:#2d8cf0;
+@border-color:#eee;
+
+@info-color:#2db7f5;
+@success-color:#19be6b;
+@warning-color:#ff9900;
+@error-color:#ed4014;
+@background-color:#f8f8f9;
+
+@primary-color-info2:#ecf6ff;
+@primary-color-info:rgba(0,154,97,.15);
+
+@shadow-color:rgba(233, 239, 248, .8);
+.shadow(){
+    box-shadow: 0px 11px 51px 0px @shadow-color;
+}
+
+.ellipsis(){
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+//element 上下左右居中
+.center(@index:1) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: @index;
+}
