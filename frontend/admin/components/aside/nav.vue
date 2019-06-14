@@ -8,6 +8,12 @@
             </nuxt-link>
         </div>
         <div class="nav-group">
+            <nuxt-link  to="/rich-editor" class="nav-item ">
+                <i class="iconfont icon-dashboard"></i>
+                <span>富文本编辑器</span>
+            </nuxt-link>
+        </div>
+        <div class="nav-group">
             <div class="nav-group-name">权限控制</div>
             <nuxt-link  to="/admin" class="nav-item ">
                 <i class="iconfont icon-dashboard"></i>

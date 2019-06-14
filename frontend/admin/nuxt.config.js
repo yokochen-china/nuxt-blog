@@ -40,6 +40,10 @@ export default {
     {
       src:'@/plugins/echarts',
       ssr:false
+    },
+    {
+      src:'@/plugins/editor/nuxt-quill-plugin',
+      ssr:false
     }
   ],
 

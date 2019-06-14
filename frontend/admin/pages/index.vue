@@ -2,7 +2,7 @@
     <div class="login-page">
         <div class="login-box">
             <div class="login-box-header">
-                <h1>Chen YuQiao's Personal Website</h1>
+                <h1>ECHOADMIN</h1>
                 <p>Who's that? Don't move! </p>
                 <p>I need inspect your's passport.</p>
             </div>
@@ -35,6 +35,7 @@ export default {
         }
     }
     .login-page{
+        background: #eee;
         .login-box{
             max-width: 400px;
             padding: 20px;

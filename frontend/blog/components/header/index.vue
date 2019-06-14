@@ -30,7 +30,7 @@
                     <input type="search" @keydown.13.prevent="search" class="search-input" placeholder="搜索">
                     <i class="iconfont icon-search" @click="search"></i>
                 </div>
-                <a href="#" class="m-hide"><i class="iconfont icon-GitHub"></i></a>
+                <!-- <a href="#" class="m-hide"><i class="iconfont icon-GitHub"></i></a> -->
             </div>
         </div>
     </header>
@@ -91,7 +91,7 @@ export default {
                 display: flex;
                 align-items: center;
                 .header-search{
-                    margin-right: 35px;
+                    // margin-right: 35px;
                     position: relative;
                     .search-input{
                         border: 1px solid @border-color;

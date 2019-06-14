@@ -1,7 +1,7 @@
 <template>
     <div class="article-section">
         <div class="article-section-header">
-            <h3>最近</h3>
+            <h3>热门</h3>
             <a class="more">更多»</a>
         </div>
         <div class="article-section-container">

@@ -1,6 +1,6 @@
 <template>
     <div class="dashboard-page">
-        <div  ref="charts" :style="{width: '100%',height: '300px'}"></div>
+        <div class="line-chart" ref="charts" :style="{width: '100%',height: '300px'}"></div>
     </div>
 </template>
 <script>
@@ -15,6 +15,7 @@ export default {
     },
     mounted(){
         this.drawLine()
+
     },
     methods:{
         drawLine(){
@@ -59,6 +60,9 @@ export default {
 </script>
 <style lang="less" scoped>
     .dashboard-page{
-        
+        padding-top: @space-width;
+        .line-chart{
+            .shadow();
+        }
     }
 </style>

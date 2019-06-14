@@ -2,6 +2,7 @@
     <div class="tag-list">
         <div class="tag-list-header">
             <h3>标签</h3>
+            <a class="more">更多»</a>
         </div>
         <div class="tag-list-container">
             <a href="#" class="tag-item">Javascript</a>

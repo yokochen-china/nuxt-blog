@@ -30,3 +30,13 @@
     white-space: nowrap;
     width: 100%;
 }
+
+
+//element 上下左右居中
+.center(@index:1) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: @index;
+}

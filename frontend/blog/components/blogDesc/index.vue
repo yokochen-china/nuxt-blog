@@ -10,6 +10,9 @@
         </div>
     </div>
 </template>
+<script>
+
+</script>
 <style lang="less" scoped>
 .home-blog-desc{
     background-color: @primary-color;
@@ -24,6 +27,9 @@
         display: table-cell;
         align-content: center;
         vertical-align: middle;
+        background-size:186px;
+        background-position:  right;
+        background-repeat: no-repeat;
         h2{
             font-size: 28px;
             font-weight: 500;

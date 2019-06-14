@@ -1,5 +1,5 @@
 <template>
-    <div class="aside-brand"><span>YOKOADMIN</span></div>
+    <div class="aside-brand"><span>ECHOADMIN</span></div>
 </template>
 <style lang="less" scoped>
 .aside-brand{

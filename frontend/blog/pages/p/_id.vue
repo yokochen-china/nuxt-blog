@@ -37,62 +37,7 @@
             </div>
             <div class="article-comment">
                 <commentForm/>
-                <div class="article-comment-header">
-                    <div class="article-comment-header-left">2条评论</div>
-                    <div class="article-comment-header-right">2条评论</div>
-                </div>
-                <div class="article-comment-container">
-                    <div class="article-comment-item">
-                        <div class="user-ico">
-                            <img src="http://q1.qlogo.cn/g?b=qq&nk=8144064&s=640"/>
-                        </div>
-                        <div class="article-comment-item-container">
-                            <div class="article-comment-item-container-header">
-                                <div class="user-name"><a href="#">张三</a></div>
-                                <div class="comment-time">·<span>5月6日</span></div>
-                                <span class="floor">#1</span>
-                            </div>
-                            <div class="article-comment-item-container-content">
-                                智哥威武
-                            </div>
-
-                            <div class="article-comment-item-controll">
-                                <div class="article-comment-item-controll-item">
-                                    <i class="iconfont icon-zan"></i>
-                                    赞
-                                </div>
-                                <div class="article-comment-item-controll-item">
-                                    回复
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="article-comment-item">
-                        <div class="user-ico">
-                            <img src="http://q1.qlogo.cn/g?b=qq&nk=8144064&s=640"/>
-                        </div>
-                        <div class="article-comment-item-container">
-                            <div class="article-comment-item-container-header">
-                                <div class="user-name"><a href="#">张三</a></div>
-                                <div class="comment-time">·<span>5月6日</span></div>
-                                <span class="floor">#1</span>
-                            </div>
-                            <div class="article-comment-item-container-content">
-                                智哥威武
-                            </div>
-
-                            <div class="article-comment-item-controll">
-                                <div class="article-comment-item-controll-item">
-                                    <i class="iconfont icon-zan"></i>
-                                    赞
-                                </div>
-                                <div class="article-comment-item-controll-item">
-                                    回复
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <comments/>
             </div>
             <template slot="aside">
                 <articleCatalog/>
@@ -102,94 +47,21 @@
 </template>
 <script>
 import articleCatalog from "@/components/articleCatalog"
-import commentForm from "@/components/commentForm"
+import commentForm from "@/components/comments/commentForm"
+import comments from "@/components/comments"
 
 export default {
     components:{
         articleCatalog,
-        commentForm
+        commentForm,
+        comments
     }
 }
 </script>
 
 <style lang="less" scoped>
     .article-detail-page{
-        .article-comment{
-           
-            .article-comment-header{
-                display: flex;
-                justify-content: space-between;
-                padding: 6px 0;
-                border-top: 1px dashed @border-color;
-                border-bottom: 1px dashed @border-color;
-            }
-            .article-comment-container{
-                padding-top: 15px;
-                .article-comment-item{
-                    display: flex;
-                    padding: 15px 0;
-                    border-bottom: 1px dashed @border-color;
-                    .user-ico{
-                        width: 60px;
-                        overflow: hidden;
-                        img{
-                            width: 40px;
-                            height: 40px;
-                            overflow: hidden;
-                            border-radius: 50%;
-                        }
-                    }
-                    .article-comment-item-container{
-                        flex: 1;
-                        .article-comment-item-container-header{
-                            display: flex;
-                            font-size: 13px;
-                            padding-bottom: 6px;
-                            position: relative;
-                            .user-name{
-                                margin-right: 5px;
-                                a{
-                                    color: @primary-color!important;
-                                }
-                            }
-                            .comment-time{
-                                font-weight: bold;
-                                span{
-                                    padding-left: 5px;
-                                    font-weight: normal;
-                                }
-                            }
-                            .floor{
-                                position: absolute;
-                                right: 0;
-                                top: 0;
-                                float: right;
-                            }
-                        }
-                        .article-comment-item-container-content{
-                            font-size: 14px;
-                            font-weight: 500;
-                            
-                        }
-                        .article-comment-item-controll{
-                            display: flex;
-                            align-items: center;
-                            padding-top: 16px;
-                            .article-comment-item-controll-item{
-                                font-size: 12px;
-                                margin-right: 12px;
-                                user-select: none;
-                                cursor: pointer;
-                                .iconfont{
-                                    font-size: 12px;
-                                }
-                            }
-                        }
-                        
-                    }
-                }
-            }
-        }
+        
 
         .article-header{
             .article-title{

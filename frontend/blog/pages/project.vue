@@ -2,8 +2,8 @@
     <div class="project-page page">
         <layoutContainer>
             <div class="project-query">
-                <div class="project-query-item project-query-this">我的收藏</div>
-                <div class="project-query-item">我的仓库</div>
+                <div class="project-query-item project-query-this">Stars</div>
+                <div class="project-query-item">Repositories</div>
             </div>
             <div class="project-list">
                 <projectListItem/>
