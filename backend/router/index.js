@@ -1,4 +1,9 @@
-const router = require("koa-router")()
+const Router = require("koa-router")
+
+const router = new Router({
+    prefix: '/v1'
+})
+
 router.use(async (ctx,next)=>{
     // todo 签名校验
     console.log("todo 签名校验")
@@ -12,12 +17,9 @@ router.use(async (ctx,next)=>{
     await next()
 })
 
-
-
-
 const User = require("./User")
 
-router.use("/v1/user",User.routes())
+router.use("/user",User.routes())
 
 // 导出路由
 module.exports=router

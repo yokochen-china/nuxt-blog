@@ -21,7 +21,13 @@ export default {
         // }
     },
     async mounted(){
-        console.log(this.$route)
+        const {code} = this.$route.query
+        if(code){
+            const res= await axios.post("http://192.168.0.246:8081/v1/user/login/github",{
+                code
+            })
+            console.log(res)
+        }
     }
 }
 </script>

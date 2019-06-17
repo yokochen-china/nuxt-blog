@@ -4,6 +4,7 @@ const config = conf[conf.env].oauth2
 const DB = require("../models")
 const axios = require("axios")
 
+const {makeJWT} = require("../utils/webToken")
 
 module.exports=class CommentController{
     static async githubLoign(ctx){
@@ -48,9 +49,17 @@ module.exports=class CommentController{
                     as:"user"
                 }
             })
+            let payload={}
             // 该用户已经注册
             if(user){
-                ctx.state.sendResult({...user.dataValues})
+                payload={
+                    ...user.dataValues
+                }
+                const token = makeJWT(payload)
+                ctx.state.sendResult({
+                    token,
+                    ...payload
+                })
             }else{
                 const userSchema = new DB.User({
                     name:userInfo.name,
@@ -68,14 +77,19 @@ module.exports=class CommentController{
                 })
 
                 await userThirdSchema.save()
-
-                ctx.state.sendResult({
+                payload={
                     id:userSchema.dataValues.id,
                     name:userSchema.dataValues.name,
                     email:userSchema.dataValues.email,
                     blog:userSchema.dataValues.blog,
                     github:userSchema.dataValues.github,
                     avatar:userSchema.dataValues.avatar
+                }
+
+                const token = makeJWT(payload)
+                ctx.state.sendResult({
+                    token,
+                    ...payload
                 })
             }
 
@@ -85,3 +99,4 @@ module.exports=class CommentController{
         }
     }
 }
+
