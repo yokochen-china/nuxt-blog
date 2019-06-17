@@ -1,0 +1,43 @@
+{
+    "env":"development",
+    "development": {
+        "serverport":"8081",
+        "mysql":{
+            "username": "root",
+            "password": "",
+            "database": "yoko_blog",
+            "host": "127.0.0.1",
+            "dialect": "mysql",
+            "timezone": "+08:00"
+        },
+        "oauth2":{
+            "github":{
+                "client_id"    :"b1cfe8d2c232907f1667",
+                "client_secret":"00cd6f1b8130352730c5def129eb767d64753791"
+            }
+        }
+    },
+    "test": {
+        "serverport":"8080",
+        "mysql":{
+            "username": "root",
+            "password": null,
+            "database": "yoko_blog",
+            "host": "127.0.0.1",
+            "dialect": "mysql",
+            "timezone": "+08:00"
+        }
+    },
+    "production": {
+        "serverport":"8081",
+        "mysql":{
+            "username": "root",
+            "password": null,
+            "database": "yoko_blog",
+            "host": "127.0.0.1",
+            "dialect": "mysql",
+            "timezone": "+08:00"
+        }
+    }
+}
+  
